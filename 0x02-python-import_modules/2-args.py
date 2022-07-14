@@ -8,16 +8,16 @@ if __name__ == "__main__":
 
     if num == 1:
 
-        print("{} arguments.".format(num - 1))
+        print(f"{num - 1} arguments.")
 
     elif num == 2:
 
-        print("{} argument:".format(num - 1))
+        print(f"{num - 1} argument:")
 
     else:
 
-        print("{} arguments:".format(num - 1))
+        print(f"{num - 1} arguments:")
 
     for i in range(1, num):
 
-        print("{}: {}".format(i, sys.argv[i]))
+        print(f"{i}: {sys.argv[i]}")
