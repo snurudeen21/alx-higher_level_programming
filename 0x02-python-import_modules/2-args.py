@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+
 if _name_ == "_main_":
     from sys import argv
     length = len(argv)
+
     if length == 1:
         print(f"{length - 1:d} arguments.")
     elif length == 2:
