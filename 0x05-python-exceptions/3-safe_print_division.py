@@ -6,7 +6,7 @@ def safe_print_division(a, b):
 
         result = a / b
 
-    except:
+    except (TypeError, ZeroDivisionError):
 
         result = None
 
