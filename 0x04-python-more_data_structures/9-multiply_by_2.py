@@ -2,12 +2,10 @@
 
 def multiply_by_2(a_dictionary):
 
-    New_dic = {}
+    new_d = {}
 
     for i in a_dictionary:
 
-        Newvalue = (a_dictionary.get(i)) * 2
+        new_d[i] = a_dictionary[i] * 2
 
-        New_dic.update({i: Newvalue})
-
-    return (New_dic)
+    return new_d
