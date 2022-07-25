@@ -81,11 +81,11 @@ class Square:
         if not self.size:
             return "\n"
         for w in range(self.position[1]):
-                pos += "\n"
+            pos += "\n"
         for w in range(self.size):
-            for l in range(self.position[0]):
+            for i in range(self.position[0]):
                 pos += " "
-            for l in range(self.size):
+            for i in range(self.size):
                 pos += "#"
             pos += "\n"
         return pos
