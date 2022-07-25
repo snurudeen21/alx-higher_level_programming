@@ -1,46 +1,22 @@
 #!/usr/bin/python3
-"""
-This module defines a Square class
-
-Its implements value and type checks for its attributes with area function
-"""
+"""writing a docstring"""
+import math
 
 
-class Square:
-    """Square implementation
-    """
-    def __init__(self, size=0):
-        self.size = size
+class MagicClass:
+    """set up the magic"""
 
-    def __lt__(self, other):
-        return self.__size < other.size
-
-    def __le__(self, other):
-        return self.__size <= other.size
-
-    def __eq__(self, other):
-        return self.__size == other.size
-
-    def __ne__(self, other):
-        return self.__size != other.size
-
-    def __gt__(self, other):
-        return self.__size > other.size
-
-    def __ge__(self, other):
-        return self.__size >= other.size
-
-    @property
-    def size(self):
-        return self.__size
-
-    @size.setter
-    def size(self, size):
-        if type(size) != int:
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
-        self.__size = size
+    def __init__(self, radius=0):
+        """ writing another docstring """
+        self.__radius = 0
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError('radius must be a number')
+        self.__radius = radius
 
     def area(self):
-        return (self.__size ** 2)
+        """again with the docstring"""
+        return self.__radius ** 2 * math.pi
+
+    def circumference(self):
+        """such docstring"""
+        return 2 * math.pi * self.__radius
