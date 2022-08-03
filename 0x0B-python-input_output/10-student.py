@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Module to print status code """
-import sys
 
 
 class Magic:
