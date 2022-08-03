@@ -50,7 +50,7 @@ if __name__ == "__main__":
                 magic.size += int(list_line[-1].strip("\n"))
                 raise Error
             except Error
-                pass
+            pass
             nlines += 1
     except KeyboardInterrupt:
         magic.print_info()
