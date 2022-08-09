@@ -8,7 +8,7 @@ class TestSquareArea(unittest.TestCase):
         # Test area when length >= 0
         self.assertAlmostEqual(square_area(0), 0)
         self.assertAlmostEqual(square_area(4), 16)
-    
+
     def test_value(self):
         # Ensure ValueError are raised when neccesary
         self.assertRaises(ValueError, square_area, -2)
