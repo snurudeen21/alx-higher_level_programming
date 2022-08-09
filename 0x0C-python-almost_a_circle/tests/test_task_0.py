@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-""" Calculate area of Square """
+import unittest
+from model_task_0 import square_area
 
 
-def square_area(length):
-    if length < 0:
-        raise ValueError("Please enter a positive integer")
-    return length**2
+class TestSquareArea(unittest.TestCase):
+    def test_area(self):
+        # Test area when length >= 0
+        self.assertAlmostEqual(square_area(0), 0)
+        self.assertAlmostEqual(square_area(4), 16)
+    
+    def test_value(self):
+        # Ensure ValueError are raised when neccesary
+        self.assertRaises(ValueError, square_area, -2)
