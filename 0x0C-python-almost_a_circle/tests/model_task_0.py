@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ Calculate area of Square """
 
 
