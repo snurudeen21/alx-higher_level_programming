@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import unittest
-from Area import square_area
+from model_task_0 import square_area
 
 
 class TestSquareArea(unittest.TestCase):
