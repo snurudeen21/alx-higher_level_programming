@@ -8,7 +8,6 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     """Define unit test for Base model"""
-
     def test_initialization(self):
         base1 = Base()
         base2 = Base()
@@ -21,6 +20,7 @@ class TestBase(unittest.TestCase):
 
     def test_to_json_string_valid(self):
         pass
+
 
 if __name__ == '__main__':
     unittest.main()
