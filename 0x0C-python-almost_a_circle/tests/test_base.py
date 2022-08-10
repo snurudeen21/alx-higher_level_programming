@@ -1,14 +1,26 @@
 #!/usr/bin/python3
+"""Unittests for base
+"""
+
 import unittest
-from model_task_0 import square_area
+from models.base import Base
 
 
-class TestSquareArea(unittest.TestCase):
-    def test_area(self):
-        # Test area when length >= 0
-        self.assertAlmostEqual(square_area(0), 0)
-        self.assertAlmostEqual(square_area(4), 16)
+class TestBase(unittest.TestCase):
+    """Define unit test for Base model"""
 
-    def test_value(self):
-        # Ensure ValueError are raised when neccesary
-        self.assertRaises(ValueError, square_area, -2)
+    def test_initialization(self):
+        base1 = Base()
+        base2 = Base()
+        self.assertEqual(base1.id, 1)
+        self.assertEqual(base2.id, 2)
+
+    def test_saving_id(self):
+        base = Base(100)
+        self.assertEqual(base.id, 100)
+
+    def test_to_json_string_valid(self):
+        pass
+
+if __name__ == '__main__':
+    unittest.main()
