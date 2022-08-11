@@ -99,7 +99,7 @@ class Rectangle(Base):
         """prints # shape of the rectangle
         """
         print('\n'*self.y, end='')
-        for len in range(self.height):
+        for length in range(self.height):
             print(' '*self.x + '#'*self.width)
 
     def update(self, *args, **kwargs):
