@@ -110,7 +110,7 @@ class Rectangle(Base):
         if args != ():
             self.id, self.width, self.height, self.x, self.y = \
                 args + expect[len(args):len(expect)]
-        else kwargs:
+        elif kwargs:
             for (name, value) in kwargs.items():
                 setattr(self, name, value)
 
