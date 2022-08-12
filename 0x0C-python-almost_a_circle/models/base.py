@@ -9,11 +9,6 @@ import turtle
 
 
 class Base:
-<<<<<<< HEAD
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-=======
     """
     implementation
     """
@@ -26,14 +21,11 @@ class Base:
         Args:
             id (int, optional): object id. Defaults to None.
         """
->>>>>>> a5f537d62dcee78e0a3cbd47476ce43364866fb1
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-<<<<<<< HEAD
-=======
 
     @staticmethod
     def to_json_string(list_dictionaries: dict):
@@ -140,4 +132,3 @@ class Base:
             pen.right(90)
 
         window.exitonclick()
->>>>>>> a5f537d62dcee78e0a3cbd47476ce43364866fb1
