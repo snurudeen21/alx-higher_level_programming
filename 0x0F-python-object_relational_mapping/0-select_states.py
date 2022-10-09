@@ -13,7 +13,7 @@ if __name__ == '__main__':
     from the database.
     """
     db = MySQLdb.connect(host="localhost", user="root", port=3306,
-                         passwd="root", db="my_db")
+                         passwd="root", db="hbtn_0e_0_usa")
 
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
