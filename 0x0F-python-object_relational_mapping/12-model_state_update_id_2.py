@@ -24,4 +24,4 @@ if __name__ == "__main__":
     ari_state = session.query(State).filter(State.id == '2').first()
     ari_state.name = 'New Mexico'
     session.commit()
-    session.close()Update a state
+    session.close()
