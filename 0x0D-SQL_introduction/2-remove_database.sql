@@ -1,3 +1,3 @@
--- Create a Database
--- If doesn't exist
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0
+-- Delete a Database
+-- If it exist
+DROP DATABASE IF EXISTS hbtn_0c_0
