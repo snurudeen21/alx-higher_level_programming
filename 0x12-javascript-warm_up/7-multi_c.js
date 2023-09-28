@@ -1,10 +1,10 @@
-#!/usr/bin/node
-const list = require('./101-data').dict;
-const sorted = {};
+#!/usr/bin/env node
+const numOccurrences = parseInt(process.argv[2]);
 
-Object.keys(list).forEach(key => {
-  if (sorted[list[key]] === undefined) sorted[list[key]] = [];
-  sorted[list[key]].push(key);
+if (isNaN(numOccurrences)) {
+  console.log("Missing number of occurrences");
+} else {
+  for (let i = 0; i < numOccurrences; i++) {
+    console.log("C is fun");
+  }
 }
-);
-console.log(sorted);
