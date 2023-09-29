@@ -3,5 +3,6 @@
 const Arr = require('./100-data').list;
 
 const newArr = Arr.map((x, index) => x * index);
+
 console.log(Arr);
 console.log(newArr);
