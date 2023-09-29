@@ -1,8 +1,8 @@
 #!/usr/bin/node
-/* using map to create a new Array */
-const Arr = require('./100-data');
+const list = require('./100-data').list;
+const newList = list.map(function (x, index) {
+  return x * index;
+});
 
-const newArr = Arr.map((x, index) => x * index);
-
-console.log(Arr);
-console.log(newArr);
+console.log(list);
+console.log(newList);
