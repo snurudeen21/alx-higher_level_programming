@@ -12,7 +12,7 @@ else:
 
     l_digit = number % -10
 
-    print("Last digit of {} is {}".format(number, l_digit), end=" ")
+print("Last digit of {} is {}".format(number, l_digit), end=" ")
 
 if l_digit > 5:
 
