@@ -19,7 +19,7 @@ class Rectangle:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
         """
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -68,7 +68,7 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            [rect.append(str(Rectangle.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
@@ -81,5 +81,5 @@ class Rectangle:
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
