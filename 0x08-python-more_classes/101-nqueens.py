@@ -64,6 +64,7 @@ def Queen(m_queen, nqueen):
     m_queen[nqueen] = -1
 
     while((m_queen[nqueen] < len(m_queen) - 1)):
+
         m_queen[nqueen] += 1
 
         if isSafe(m_queen, nqueen) is True:
@@ -95,7 +96,7 @@ if __name__ == '__main__':
 
     try:
         size = int(sys.argv[1])
-    except TypeError:
+    except Exception as e:
         print("N must be a number")
         sys.exit(1)
 
