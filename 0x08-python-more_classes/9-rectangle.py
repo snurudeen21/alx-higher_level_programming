@@ -19,7 +19,7 @@ class Rectangle:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
         """
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -82,7 +82,9 @@ class Rectangle:
         Args:
             size (int): The width and height of the new Rectangle.
         """
-        return (cls(size, size))
+        self.__width = size
+		self.__height = self.__width
+		return(cls(width, height)
 
     def __str__(self):
         """Return the printable representation of the Rectangle.
@@ -106,5 +108,5 @@ class Rectangle:
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
