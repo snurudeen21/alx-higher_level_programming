@@ -18,5 +18,5 @@ def is_kind_of_class(obj, a_class):
         boolean: response
     """
     if isinstance(obj, a_class):
-        return True
+        return (True)
     return (False)
