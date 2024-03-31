@@ -11,8 +11,8 @@ import requests
 
 
 if __name__ == "__main__":
-    user = sys.argv[1]  # username
-    repository = sys.argv[2]  # repository name
+    user = sys.argv[1]
+    repository = sys.argv[2]
 
     url = "https://api.github.com/repos/{}/{}/commits".format(user, repository)
 
