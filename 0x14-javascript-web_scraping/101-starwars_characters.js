@@ -1,38 +1,23 @@
+#!/usr/bin/node
+
 const request = require('request');
-
-function fetchCharacters() {
-    const apiUrl = `https://swapi.dev/api/films/' + process.argv[2];
-
-        request(apiUrl, (error, response, body) => {
-        if (error) {
-            console.error('Error:', error);
-            return;
-        }
-        if (response.statusCode !== 200) {
-            console.error('Unexpected status code:', response.statusCode);
-            return;
-        }
-
-        const filmData = JSON.parse(body);
-
-        const characters = filmData.characters;
-
-        characters.forEach((characterUrl) => {
-            request(characterUrl, (error, response, body) => {
-                if (error) {
-                    console.error('Error:', error);
-                    return;
-                }
-                if (response.statusCode !== 200) {
-                    console.error('Unexpected status code:', response.statusCode);
-                    return;
-                }
-
-                const characterData = JSON.parse(body);
-                console.log(characterData.name);
-            });
-        });
-    });
+function helpRequest (arr, i) {
+  if (i === arr.length) {
+    return;
+  }
+  request(arr[i], function (error, response, body) {
+    if (error) {
+      console.error(error);
+    }
+    console.log(JSON.parse(body).name);
+    helpRequest(arr, i + 1);
+  });
 }
 
-fetchCharacters();
+request('http://swapi.co/api/films/' + process.argv[2], function (error, response, body) {
+  if (error) {
+    console.error(error);
+  }
+  const charac = JSON.parse(body).characters;
+  helpRequest(charac, 0);
+});
